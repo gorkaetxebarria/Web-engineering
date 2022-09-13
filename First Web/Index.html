@@ -11,9 +11,9 @@
     <h1>Gorka Etxebarria</h1>
     <nav>
       <a href="file2.html">internal link</a>
-      <a href="https://mondagon.edu" title="external link"> externa link</a>
-      <a href="" title="external link new tab">external link new tab</a>
-      <a href="" title="go to an id">go to an idS</a>
+      <a href="https://mondragon.edu" title="external link"> externa link</a>
+      <a href="https://mondragon.edu" title="external link new tab" target="_blank">external link new tab</a>
+      <a href="#foto" title="go to an id" >go to an id</a>
     </nav>
     <hr />
     <section>
@@ -36,54 +36,68 @@
     <p>
       Progress in life goals(70%) <progress value="70" max="100">100%</progress>
     </p>
-    <h2>More About me</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, dolor?</p>
-    <h2>table section</h2>
-    <table>
-      <tr>
-        <th>colum1</th>
-        <th>colum2</th>
-        <th>colum3</th>
-      </tr>
-      <tr>
-        <td>cel1-1</td>
-        <td>cel1-2</td>
-        <td>cel1-3</td>
-      </tr>
-      <tr>
-        <td>cel2-1</td>
-        <td>cel2-2</td>
-        <td>cel2-3</td>
-      </tr>
-      <tr>
-        <td>cel3-1</td>
-        <td>cel3-2</td>
-        <td>cel3-3</td>
-      </tr>
-    </table>
-    <h2>Contact me</h2>
-    <label for="Subject">Subject:</label><br />
-    <input
-      type="text"
-      name="Subject"
-      placeholder="set the subject of the message"
-    />
-    <br />
-    <label for="message">message:</label><br />
-    <textarea name="w3review" rows="4" cols="50">
-set de subject of the message</textarea
-    >
-    <br />
-    <input type="submit" value="Send Message" />
-    <hr />
-    <footer>
+    <section>
+      <h2>More About me</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia
-        necessitatibus laboriosam doloribus. At saepe cum molestiae ipsum
-        doloribus, placeat vel.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, dolor?
       </p>
-      <img src="https://picsum.photos/200/200" alt="foto" />
-    </footer>
+    </section>
+    <section>
+      <h2>table section</h2>
+      <table>
+        <tr>
+          <th>colum1</th>
+          <th>colum2</th>
+          <th>colum3</th>
+        </tr>
+        <tr>
+          <td>cel1-1</td>
+          <td>cel1-2</td>
+          <td>cel1-3</td>
+        </tr>
+        <tr>
+          <td>cel2-1</td>
+          <td>cel2-2</td>
+          <td>cel2-3</td>
+        </tr>
+        <tr>
+          <td>cel3-1</td>
+          <td>cel3-2</td>
+          <td>cel3-3</td>
+        </tr>
+      </table>
+    </section>
+    <section>
+      <form action="file2.html" >
+      <h2>Contact me</h2>
+      <label for="Subjects">Subject</label><br />
+      <input
+        type="text"
+        name="Subject"
+        placeholder="set the subject of the message"
+        required="required"
+      />
+      <br />
+      <label for="messages">message</label><br />
+      <textarea name="w3review" rows="4" cols="50" required="required">
+        set de subject of the message
+      </textarea
+      >
+      <br />
+      <input type="submit" value="Send Message" />
+      </form>
+    </section>
+    <hr />
+    <section>
+      <footer>
+        <h4>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia
+          necessitatibus laboriosam doloribus. At saepe cum molestiae ipsum
+          doloribus, placeat vel.
+        </h4>
+        <img src="https://picsum.photos/512/256" alt="foto"id="foto"/>
+      </footer>
+    </section>
     <hr />
   </body>
 </html>
