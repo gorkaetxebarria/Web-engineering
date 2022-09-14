@@ -1,0 +1,73 @@
+#overall {
+  border: 1px solid black;
+  padding: 1rem;
+  margin: 1rem;
+}
+.navegation {
+  border: 1px solid black;
+  padding: 1rem;
+  margin: 1rem;
+}
+.nav {
+  border: 1px solid black;
+  padding: 1rem;
+  display: inline-block;
+}
+.nav:hover {
+  background-color: black;
+  color: white;
+}
+.nav:active {
+  background-color: black;
+  color: white;
+}
+#page {
+  border: 1px solid black;
+  padding: 1rem;
+  margin: 1rem;
+}
+th,
+td {
+  border: 1px solid black;
+  padding: 1rem;
+  margin: 1rem;
+}
+table
+{
+    border: 1px solid black;
+    padding: 1rem;
+    margin: 1rem; 
+    width:98%;
+    height: 100%;
+}
+li
+{
+    border: 1px solid black;
+  padding: 1rem;
+  margin: 1rem; 
+}
+.list
+{
+     border: 1px solid black;
+  padding: 1rem;
+  margin: 1rem; 
+}
+input:checked
+{
+    box-shadow: 0 0 15px rgba(0,0,0,0.7);
+}
+*::first-letter
+{
+    font-size: 32px;
+}
+*::selection
+{
+    background-color: yellow;
+}
+
+[href*="mondragon.edu"]
+{
+    border: 1px solid black;
+  padding: 1rem;
+    background-color: aquamarine;
+}
