@@ -1,0 +1,68 @@
+#overall{
+    border: 1px solid black;
+    padding: 1rem;
+    margin: 1rem;
+}
+.navegation{
+    border: 1px solid black;
+    padding: 1rem;
+    margin: 1rem;
+    
+}
+.nav{
+    border: 1px solid black;
+    padding: 1rem;
+    display: inline-block; 
+}
+.nav:hover
+{
+    background-color: black;
+    color: white;
+}
+.nav:active
+{
+    background-color: black;
+    color: white;
+}
+#page
+{
+    border: 1px solid black;
+    padding: 1rem;
+    margin: 1rem;
+}
+#lastpara{
+    color: red;
+}
+.paragrahps
+{
+    border: 1px solid black;
+    padding: 1rem;
+    margin: 1rem;
+}
+p{
+    border: 1px solid black;
+    padding: 1rem;
+    margin: 1rem;
+    background-color:grey;
+}
+[paragrahps$="Lorem ipsum dolor si"]{
+    border: 1px solid black;
+    background-color: lightblue;
+}
+#p1
+{
+    border: 1px solid black;
+    background-color: lightblue;
+}
+#p2
+{
+    border: 1px solid black;
+    background-color: lightblue;
+    color: red;
+}
+#p3
+{
+    border: 1px solid black;
+    background-color: lightblue;
+    color: red;
+}
