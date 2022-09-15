@@ -1,0 +1,37 @@
+h1,h2{
+color: blue;
+}
+section
+{
+    margin: 16px;
+}
+.special p 
+{
+    font-weight: bold;
+}
+.special > p 
+{
+    color: darkred;
+}
+.special > p{
+
+    margin: 0;
+    padding: 16px;
+    border: 1px solid black;
+}
+.special > p:first-child
+{
+    border-radius: 8px 8px 0 0;
+}
+.special > p:last-child
+{
+    border-radius: 8px 8px 8px 8px;
+}
+
+.special >div{
+    margin: 0;
+    padding: 16px;
+    border: 1px solid black;
+    border-radius: 0 0 8px 8px;
+}
+

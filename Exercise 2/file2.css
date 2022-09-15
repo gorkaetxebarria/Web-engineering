@@ -13,13 +13,10 @@
   padding: 1rem;
   display: inline-block;
 }
-.nav:hover {
-  background-color: black;
-  color: white;
-}
-.nav:active {
-  background-color: black;
-  color: white;
+#current
+{
+    background-color: black;
+    color: white;
 }
 #page {
   border: 1px solid black;
