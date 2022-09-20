@@ -6,7 +6,7 @@
     margin: 0;
   }
   
-  header, nav, footer {
+  header, nav,footer {
     text-align: center;
   }
   
@@ -58,7 +58,7 @@
     background: linear-gradient( #0009, #0000, #0009);
   }
   
-  .card__sinopsis {
+  .card_sinopsis {
     margin: 0.5rem;
     padding: 0.5rem;
     border: 1px dotted currentColor;
