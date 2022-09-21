@@ -1,0 +1,27 @@
+:root {
+    font-size: 16px;
+  }
+  header, nav {
+    text-align: center;
+  }
+  body {
+    margin: 0;
+  }
+  nav {
+    position: sticky;
+    top: 0;
+    background-color: lightsteelblue;
+    padding: 1em;
+  }
+  
+  nav > a {
+    display: inline-block;
+    border-radius: 0.25em;
+    background-color: whitesmoke;
+    padding: 1em;
+  }
+  
+  nav > a + a {
+    margin-left: 1em;
+  }
+  

@@ -1,0 +1,28 @@
+:root {
+  font-size: 16px;
+}
+nav > a {
+  text-align: center;
+  display: inline-block;
+  width: 15%;
+  margin: 15px;
+  padding: 15px;
+  border: 1px solid transparent;
+  box-shadow: 0px 0px 5px 1.8px rgba(0, 0, 0, 0.5);
+  background-color: white;
+}
+.movetop {
+  background-color: yellow;
+}
+.movetop:hover {
+  position: relative;
+  bottom: 0.5em;
+}
+.content{
+    margin-bottom: 300px;
+}
+.imagen {
+  position: fixed;
+    bottom: 1px;
+    right: 1px;
+}
