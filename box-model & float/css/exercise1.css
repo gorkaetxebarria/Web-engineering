@@ -1,0 +1,31 @@
+:root {
+  font-size: 16px;
+}
+body {
+  margin: 0;
+}
+nav {
+  background-color: lightgrey;
+}
+nav > a {
+  display: inline-block;
+  margin: 1em;
+  padding: 1em;
+  border: 1px solid black;
+  background-color: steelblue;
+  width: calc(25% - 4em - 5px);
+  text-align: center;
+}
+
+.lefthigh {
+  float: left;
+  margin: 0 1em 1em 0;
+}
+
+.righthigh {
+  float: right;
+  margin: 0 1em 1em 0;
+}
+.leftdown {
+  clear: left;
+}
