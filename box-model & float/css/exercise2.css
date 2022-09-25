@@ -1,0 +1,50 @@
+root {
+  font-size: 16px;
+}
+body {
+  margin: 0;
+}
+header {
+  background-color: #f57f6f;
+  text-align: center;
+  padding: 1rem;
+}
+nav {
+  background-color: lightgrey;
+  box-sizing: border-box;
+  width: 75%;
+
+}
+nav > a {
+  display: inline-block;
+  margin: 1em;
+  padding: 1em;
+  border: 1px solid black;
+  background-color: steelblue;
+  width: calc(25% - 4em - 5px);
+  text-align: center;
+}
+
+.lista{
+    
+    text-align: center;
+    float: right;
+    width: 25%;
+    background-color: lightseagreen;
+    height: 100%;
+  
+}
+section{
+    box-sizing: border-box;
+    width: 75%;
+    background-color: lightblue;
+    padding : 1em;
+
+}
+footer {
+    clear: both;
+    padding: 1em;
+    color: whitesmoke;
+    background-color: firebrick;
+    text-align: center;
+}
