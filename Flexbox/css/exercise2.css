@@ -1,0 +1,81 @@
+body{
+    background-color: lightgray;
+    font-size: 16px;
+    margin: 0;
+}
+.nav_links {
+    border: 1px solid black;
+    padding: 2px;
+    margin: 3em;
+}
+nav, footer, .author, h2{
+    text-align: center;
+}
+nav{
+    margin-bottom: 10px;
+}
+/*Card style*/
+.card{
+    margin:10px;
+    width: calc(50% - 20px);
+    box-shadow: 5px 5px 5px grey;
+    background-color: whitesmoke;
+}
+.card:hover{
+    box-shadow: 2px 2px 2px grey;
+}
+/*Card title style*/
+.card > h2{
+    color: whitesmoke;
+    padding: 30px;
+    background-color: firebrick;
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+/*Card list style*/
+.card_list > li{
+    list-style-type: square;
+    border: 1px solid black;
+    margin-right: 25px;
+}
+span{
+    font-weight: bold;
+}
+.card_list > li:first-child{
+    border-radius: 0px 8px 0px 0px;
+    background: linear-gradient(gray,white);
+}
+.card_list > li:last-child{
+    border-radius: 0px 0px 8px 0px;
+    background: linear-gradient(white,gray);
+}
+.card_list > li:only-child{
+    border-radius: 0px 8px 8px 0px;
+    background: linear-gradient(gray, white,gray);
+}
+/*Card summary style*/
+.summary{
+    border: 1px dotted black;
+    padding: 20px 5px 20px 5px;
+    margin: 40px 5px 5px 5px
+}
+.summary::first-letter{
+    font-size: 200%;
+}
+.summary::first-line{
+    text-transform: uppercase;
+    font-size: 120%;
+}
+/*Card author style*/
+.author{
+    padding: 0px;
+    border-top: 1px solid black;
+    margin: 0px;
+}
+.container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+    padding: 0px;
+}

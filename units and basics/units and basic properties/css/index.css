@@ -1,79 +1,81 @@
-:root {
+body{
+  background-color: lightgray;
   font-size: 16px;
-}
-body {
-  background-color: #cecece;
   margin: 0;
 }
-
-header,
-nav,
-footer {
+.nav_links {
+  border: 1px solid black;
+  padding: 2px;
+  margin: 3em;
+}
+nav, footer, .author, h2{
   text-align: center;
 }
-
-nav > a {
-  border: 1px solid black;
-  padding: 4px;
+nav{
+  margin-bottom: 10px;
 }
-
-.card {
-  width: 50%;
+/*Card style*/
+.card{
+  margin:10px;
+  width: calc(50% - 20px);
+  box-shadow: 5px 5px 5px grey;
   background-color: whitesmoke;
-  margin: 1rem;
-  box-shadow: 0.25rem 0.25rem 1rem #0009;
-  transition: box-shadow 0.5s;
 }
-
-.card:hover {
-  box-shadow: 0.1rem 0.1rem 0.5rem #0009;
+.card:hover{
+  box-shadow: 2px 2px 2px grey;
 }
-
-.card_header {
-  font-size: 1.2rem;
-  background-color: firebrick;
+/*Card title style*/
+.card > h2{
   color: whitesmoke;
-  padding: 1rem;
+  padding: 30px;
+  background-color: firebrick;
+  font-size: 1.2rem;
+  margin-top: 0;
 }
-
-.card_data {
-  padding: 2rem;
-}
-.card_data > * {
-  border: 1px solid #0009;
+/*Card list style*/
+.card_list > li{
   list-style-type: square;
+  border: 1px solid black;
+  margin-right: 25px;
 }
-
-.card_data > *:first-child {
-  border-radius: 0 0.5rem 0 0;
-  background: linear-gradient(#0009, #0000);
+span{
+  font-weight: bold;
 }
-
-.card_data > *:last-child {
-  border-radius: 0 0 0.5rem 0;
-  background: linear-gradient(#0000, #0009);
+.card_list > li:first-child{
+  border-radius: 0px 8px 0px 0px;
+  background: linear-gradient(gray,white);
 }
-
-.card_data > *:only-child {
-  border-radius: 0 0.5rem 0.5rem 0;
-  background: linear-gradient(#0009, #0000, #0009);
+.card_list > li:last-child{
+  border-radius: 0px 0px 8px 0px;
+  background: linear-gradient(white,gray);
 }
-
-.card_sinopsis {
-  margin: 0.5rem;
-  padding: 0.5rem;
-  border: 1px dotted currentColor;
+.card_list > li:only-child{
+  border-radius: 0px 8px 8px 0px;
+  background: linear-gradient(gray, white,gray);
 }
-
-.card_sinopsis > p::first-line {
+/*Card summary style*/
+.summary{
+  border: 1px dotted black;
+  padding: 20px 5px 20px 5px;
+  margin: 40px 5px 5px 5px
+}
+.summary::first-letter{
+  font-size: 200%;
+}
+.summary::first-line{
   text-transform: uppercase;
-  font-size: 1.2em;
+  font-size: 120%;
 }
-
-.card_sinopsis > p::first-letter {
-  font-size: 2em;
+/*Card author style*/
+.author{
+  padding: 0px;
+  border-top: 1px solid black;
+  margin: 0px;
 }
-
-.card_footer {
-  border-top: 1px double #0009;
+.container{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px;
+  padding: 0px;
 }

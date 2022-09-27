@@ -1,0 +1,18 @@
+.row{
+    width: 100%;
+    display: flex;
+    background-color: #285a6e;
+    margin: 1rem 0;
+}
+.push{
+    margin-left: auto;
+}
+.col{
+    display: inline-block;
+    color: white;
+    padding: 1rem;
+}
+.logo_mu{
+    width: auto;
+    height: 1.2em;
+}
