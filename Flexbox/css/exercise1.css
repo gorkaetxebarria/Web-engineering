@@ -24,7 +24,7 @@ nav > a{
   padding: 1em;
   border: 1px solid black;
   background-color: steelblue;
-  width: 25%;
+  width: 100%;
   text-align: center;
 
 }
@@ -35,6 +35,7 @@ ul{
   text-align: center;
   list-style-position: inside;
   background-color: teal;
+  padding: 20px;
 }
 .text{
   width: 100%;
