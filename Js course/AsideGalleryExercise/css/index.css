@@ -1,0 +1,51 @@
+body{
+    display: grid;
+    grid-template-areas: 
+            "head head" 
+            "aside section"
+            "footer footer"
+    ;
+    grid-template-columns: 400px 1fr;
+    grid-template-rows: auto;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+#imageText{
+    display: block;
+    text-align: center;
+    background-color: darkseagreen;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+#image{
+    height: 100%;
+}
+
+section{
+    grid-row: max;
+    padding: 30;
+    grid-area: section;
+    background-color: green;
+    border: 20px solid grey;
+    position: relative;
+}
+
+
+header{
+    text-align: center;
+    padding: 20px;
+    grid-area: head;
+}
+
+aside{
+    padding: 20px;
+    grid-area: aside;
+    border: 5px solid black;
+}
+
+footer{
+    grid-area: footer;
+}
