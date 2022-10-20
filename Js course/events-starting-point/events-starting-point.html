@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events Exercise</title>
+  <script>
+    function writeText(str) {
+      console.log("Event: " + str);
+      document.getElementById('writeMe').innerHTML = "Event: " + str;
+    }
+  </script>
+</head>
+
+<!-- An event should be executed when all the DOM is loaded
+and another event when the window of the browser is resiced-->
+
+<body onload="writeText('loaded')" onresize="writeText('resized')">
+
+  <h1>Testing DOM events</h1>
+  <h2>open console log to see the events</h2>
+  <form>
+    <!-- An event should be executed when the input gets the focus (with tabulator or mouse click for example),
+another event should be executed when the focus is lost -->
+    <input type='text' id="myTextInput" onfocus="writeText('focused')" onfocusout="writeText('unfocused')" placeholder="When focused/unfocused on me" /><br /><br />
+
+    <!-- An event should be executed when the input content is changed (the focus must be lost to see the result) -->
+    <input type='text' id="myTextInput" onchange="writeText('changed')" placeholder="When the text here is changed" /><br /><br />
+
+    <!-- onclick: This is the example one, use it for testing the function -->
+    <button type='button' id="myClickBtn" onclick="writeText('onclick')">When clicked</button><br /><br />
+
+    <!-- An event should be executed when the mouse is being clicked,
+another event should be executed when the mouse is released -->
+    <button type='button' onmouseup="writeText('released')" onmousedown="writeText('pressed')">Similar but when I am pressed or released</button><br /><br />
+
+    <!-- An event should be executed when the mouse is being clicked with the right button -->
+    <button type='button' oncontextmenu="writeText('right click')">When right-clicked on me</button><br /><br />
+
+    <!-- An event should be executed when the mouse is being double clicked -->
+    <button type='button' ondblclick="writeText('double click')">When double clicked on me</button><br/><br/>
+
+    <br/><br/><br/>
+
+    <!-- An event should be executed when the mouse passes over the button,
+    another event should be executed when the mouse is not over the button anymore -->
+    <button type='button' onmouseover="writeText('mouse over')" onmouseleave="writeText('mouse left')">When the mouse is over me and when it is out of me</button><br/>
+  </form>
+  <hr/>
+  <p id="writeMe">Nothing done yet</p>
+  <hr />
+  <p>More info at <a href="https://developer.mozilla.org/en-US/docs/Web/Events">MDN - Event reference</a> or at <a
+    href="http://www.w3schools.com/jsref/dom_obj_event.asp">w3schools.com - HTML DOM Events</a>.</p>
+</body>
+</html>

@@ -1,0 +1,153 @@
+/* Formating document box model */
+* {
+	box-sizing: border-box;
+	padding: 0px;
+	margin: 0px;
+}
+
+/* Body grid template */
+body {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto 1fr auto auto;
+	grid-template-areas:
+		"header"
+		"main"
+		"nav"
+		"footer";
+		
+	width: 100vw;
+}
+
+header {
+	grid-area: header;
+}
+
+nav {
+	grid-area: nav;
+}
+
+main {
+	grid-area: main;
+}
+
+footer {
+	grid-area: footer;
+}
+
+/* Upper part */
+header {
+	text-align: center;
+	background-color: #263238;
+	color: #CFD8DC;
+}
+
+/* Navigation part */
+nav {
+	display: flex;
+	background-color: #304FFE;
+}
+
+.navButton {
+	flex-grow: 1;
+	background-color: #B2DFDB;
+	padding: calc(1rem / 2);
+	margin: calc(1rem / 2);
+	text-align: center;
+	text-decoration: none;
+	color: #263238; 
+	border-radius: 5px;
+}
+
+/* Content part */
+main {
+	display: grid;
+	grid-template-columns: 1fr;
+	
+	background-color: #CECECE;
+	padding: 1rem;
+	grid-gap: calc(1rem / 2) calc(1rem / 2);
+}
+
+.article {
+	box-shadow: 0px 0px 10px black;
+	border-radius: 10px;
+	position: relative;
+	background-color: #304FFE;
+}
+
+.article h1 {
+	border-radius: 10px 10px 0px 0px;
+	background-color: #263238;
+	color: #CFD8DC;
+	text-align: center;
+}
+
+#caption {
+	position: absolute;
+	text-align: center;
+	bottom: 0px;
+	width: 100%;
+	padding: 10px;
+	background-color: rgba(0,0,0,0.2);
+	border-radius: 0px 0px 10px 10px;
+	color: #CFD8DC;
+}
+
+/* Footer part*/
+footer {
+	background-color: #263238;
+	color: #CFD8DC;
+	text-align: center;
+}
+
+.button {
+	display: inline-block;
+	width: 20%;
+	padding: 2px;
+	border-radius: 3px;
+}
+
+footer p {
+	display: inline-block;
+	width: 40%;
+	padding: 10px;
+}
+
+#teacher {
+	font-weight: bold;
+	font-style: italic;
+}
+
+/* Media queries: Movile First */
+@media (min-width: 720px) {
+	body {
+		grid-template-rows: auto auto 1fr auto;
+		grid-template-areas:
+			"header"
+			"nav"
+			"main"
+			"footer";
+	}
+	main {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (min-width: 992px) {
+	body {
+		grid-template-columns: auto 1fr;
+		grid-template-rows: auto 1fr auto;
+		grid-template-areas:
+			". header"
+			"nav main"
+			"footer footer";
+	}
+	main {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	
+	nav {
+		flex-direction: column;
+	}
+}

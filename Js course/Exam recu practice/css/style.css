@@ -1,0 +1,179 @@
+:root{
+    --one: #003049;
+    --two: #d62828;
+    --three: #f77f00;
+    --four: #fcbf49;
+    --five: #eae2b7;
+    --Selected: steelblue;
+}
+
+#top_header{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    border: 1px solid var(--three);
+}
+
+#top_header > *{
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 2rem;
+    display: block;
+}
+
+body, p, h1{
+    margin: 0;
+}
+
+input:hover{
+    background-color: var(--Selected);
+}
+
+.card_selected{
+    background-color: var(--Selected);
+}
+
+section{
+    background-color: var(--three);
+    box-sizing: border-box;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+#main_content{
+    overflow-y: auto;
+    display: grid;
+}
+
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.card_body{
+    background-color: var(--two);
+    display: flex;
+    height: 256px;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+/* Hace lo mismo que "align-items" y "justify-content" EN ESTE CASO
+.card_body > *{
+    margin: auto;
+}*/
+
+.sec_header, footer{
+    background-color: var(--one);
+    color: var(--five);
+    text-align: center;
+}
+
+nav{
+    background-color: var(--three);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+a{
+    background-color: var(--one);
+    color: var(--five);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+}
+
+h1{
+    background-color: var(--five);
+    text-align: center;
+    font-weight: bold;
+}
+
+input{
+    border: none;
+    background-color: var(--five);
+    width: 100%;
+    text-align: center;
+}
+
+
+@media (min-width: 720px){
+    #top_header{
+        display: inline-block;
+        width: 100%;
+        grid-area: head;
+    }
+    section{        
+        position: relative;
+    }
+
+    .sec_header{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; /*right: 0;*/
+    }
+    
+    footer{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%; /*right: 0;*/
+    }
+
+    #top_header > *{
+        border: inherit;
+        box-sizing: border-box;
+        padding: 1rem;
+        margin: 1rem;
+        float: left;
+    }
+
+    h1{
+        width: calc(50% - 2rem);
+    }
+
+    input{
+        width: calc(25% - 2rem);
+    }
+
+    #main_content{
+        grid-template-columns: 1fr 1fr;
+        overflow-y: revert;
+        grid-area: sec;
+        margin-bottom: auto;
+    }
+
+    body{
+        overflow: auto;
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas: 
+            "nav head" 
+            "nav sec";
+    }
+
+    nav{
+        grid-area: nav;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .gridArea{
+        grid-column: span 2;
+    }
+    
+}
+
+@media (min-width: 1024px){
+    #main_content{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
