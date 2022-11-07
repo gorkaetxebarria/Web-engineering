@@ -39,7 +39,6 @@ nav > a{
   padding: 30px;
   background-color:var(--mu-dark);
   margin-bottom: 0.5rem;
-
   text-align: center;
 }
 nav > a:last-child{
@@ -65,6 +64,8 @@ subject{
   position: relative;
   height: calc(100% - 1rem);
   box-shadow: 0 5px 5px 1px var(--mu-dark);
+  background-color: #814795;
+  border: 1px solid black;
 }
 
 subject > img{
@@ -77,10 +78,11 @@ ul.underImg{
   border-radius: 0 0 5px 5px;
   background-color: var(--mu-purple);
   padding: 1rem;
-  border: 1px solid black;
   padding-left: 3rem;
   padding-bottom: auto;
   max-height:100%;
+  color: white;
+  font-style: italic;
 
 }
 
@@ -118,8 +120,8 @@ footer > button:hover{
 .hidden{
   display: none;
 }
-.selected{
-  box-shadow: 0 0 5px 1px red;
+.selected > .description{
+  background-color: red;
 }
 
 @media(min-width: 567px){
@@ -197,7 +199,6 @@ footer > button:hover{
     }
     nav{
       flex-direction: column;
-      
       justify-content: space-between;
       align-items: center;
 
@@ -213,9 +214,7 @@ footer > button:hover{
   body{
     grid-template-areas: 
     "head"
-    "subj"
-    "nav"
-    "foot";
+    "
   }
   main{
     grid-template-columns: repeat(3, 1fr);
@@ -228,5 +227,6 @@ footer > button:hover{
   nav > a{
     margin-bottom: 0;
     margin: 0.5rem;
+    flex-grow: 2;
   }
 }
