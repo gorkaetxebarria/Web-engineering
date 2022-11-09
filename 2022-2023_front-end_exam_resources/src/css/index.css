@@ -38,8 +38,7 @@ nav > a:first-child {
 
 article {
   border: 1px solid transparent;
-  background-color: #814795;
-  margin: 1rem 0 1rem 0;
+  margin: 1rem 1rem 1rem 1rem;
   position: relative;
   width: calc(100% - 2rem);
   height: calc(100%-2rem);
@@ -73,16 +72,19 @@ article:last-child {
   padding-bottom: auto;
   color: white;
 }
+.description{
+  background-color: var(--mu-purple);
+  border-radius: 0 0 15px 15px;
+}
 
 footer {
   background-color: black;
-  padding: 10px;
+  padding: 20px;
 }
 footer > button {
   padding: 10px;
   display: block;
   width: 100%;
-  margin: 20px;
   border-radius: 10px;
 }
 
@@ -98,11 +100,18 @@ footer > button {
     clear: both;
     display: grid;
     grid-template-columns: 70% 30%;
-    grid-template-areas: "articles nav";
+    grid-template-areas: 
+    "articles nav"
+    "footer footer";
+  }
+  article:first-child {
+    margin-top: 1rem;
   }
   nav {
     grid-area: nav;
     border-radius: 0 0 15px 15px;
+    display: flex;
+    flex-direction: column;
   }
   .container {
     grid-area: articles;
@@ -117,6 +126,14 @@ footer > button {
     margin-bottom: 25px;
     border-radius: 0 0 15px 15px;
   }
+  footer {
+    grid-area: footer;
+  }
+  footer > button{
+    float: left;
+    width: calc(100%/3 - 20px);
+    margin: 10px;
+  }
 }
 @media screen and (min-width: 1024px) {
   main {
@@ -125,16 +142,24 @@ footer > button {
       "footer footer";
   }
   .container {
-    display: grid;
-    grid-template-columns: 50% 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
     
   }
+  article  {
+    flex-grow: 1;
+    width: calc(100%/2 - 30px);
+  }
+
   footer {
     grid-area: footer;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-shrink: 1;
+    width: 100%;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -147,14 +172,20 @@ footer > button {
   }
   .container{
     grid-area: articles;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+  }
+  article {
+    width: calc(100%/3 - 30px);
+    flex-grow: 1;
   }
   nav{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    flex-grow: 1;
   }
   nav > a{
     padding:30px;
