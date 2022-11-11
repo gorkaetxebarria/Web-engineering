@@ -1,114 +1,121 @@
 :root {
-  --dark: #263238;
-  --light: #cfd8dc;
-  --bg: #cecece;
-  --indigo: #304ffe;
-  --teal: #b2dfdb;
-  --border-radius-px: 10px;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-align: center;
-}
-header {
-  background-color: var(--dark);
-  color: var(--light);
-}
-
-nav {
-  background-color: var(--indigo);
-  display: flex;
-}
-nav > a {
-  margin: 1rem;
-  padding: 1rem;
-  background-color: var(--teal);
-  width: 100%;
-  border-radius: 5px;
-  color: var(--dark);
-  text-decoration: none;
-}
-.gridContainer {
-  display: grid;
-  background-color: var(--bg);
-}
-article {
-  margin: 0.5rem;
-  border-radius: var(--border-radius-px);
-  box-shadow: 0 0 5px 1px var(--dark);
-  background-color: #304ffe;
-}
-article > h2 {
-  background-color: var(--dark);
-  color: var(--light);
-  border-radius: 10px 10px 0 0;
-}
-article > .caption {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: var(--light);
-}
-.imgContainer {
-  position: relative;
-  background-color: var(--indigo);
-  border-radius: 0 0 var(--border-radius-px) var(--border-radius-px);
-}
-.caption {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: var(--light);
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 1em;
-  border-radius: 0 0 var(--border-radius-px) var(--border-radius-px);
-}
-footer {
-  background-color: var(--dark);
-  color: var(--light);
-  padding: 1rem;
-}
-footer > button {
-  width: calc(30% - 2rem);
-  padding: 0.5rem;
-  margin: 0.5rem;
-  display: inline-block;
-  border-radius: 5px;
-  border: 0;
-}
-footer > button:hover {
-  box-shadow: 0 0 5px 1px black;
+    --dark: #263238;
+    --light: #CFD8DC;
+    --bg: #CECECE;
+    --indigo: #304FFE;
+    --teal: #B2DFDB;
+    --border-radius-px: 10px;
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  header{
+    background-color: var(--dark);
+    color: var(--light);
 }
 
-footer > label {
-  display: inline-block;
-  width: 40%;
-}
-@media screen and (min-width: 720px) {
-  main {
+nav{
+    background-color: var(--indigo);
     display: flex;
-    flex-direction: column-reverse;
-  }
-  .gridContainer {
-    grid-template-columns: repeat(2, 1fr);
-  }
+
 }
-
-@media screen and (min-width: 992px) {
-  main {
+nav > a{
+    margin: 1rem;
+    padding: 1rem;
+    background-color: var(--teal);
+    width: 100% ;
+    border-radius: 5px;
+    color: var(--dark);
+    text-decoration: none;
+}
+.gridContainer{
+    display: grid;
+    background-color: var(--bg);
+}
+article
+{
+    margin: 0.5rem;
+    border-radius: var(--border-radius-px);
+    box-shadow: 0 0 5px 1px var(--dark);
+    background-color: #304FFE;
     display: flex;
-    flex-direction: row-reverse;
+}
+article > h2{
+    background-color: var(--dark);
+    color: var(--light);
+    border-radius: 10px 10px 0 0;
+}
+article > .caption{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--light);
+}
+.imgContainer{
+    position: relative;
+    background-color: var(--indigo);
+    border-radius: 0 0 var(--border-radius-px) var(--border-radius-px);
   }
-  nav {
-    flex-direction: column;
+  .caption{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--light);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1em;
+    border-radius: 0 0 var(--border-radius-px) var(--border-radius-px);
+  }
+  footer
+  {
+    background-color: var(--dark);
+    color: var(--light);
+    padding: 1rem;
+  }
+  footer > button{
+    width: calc(30% - 2rem);
+    padding: 0.5rem;
+    margin: 0.5rem;
+    display: inline-block;
+    border-radius: 5px;
+    border: 0;
+  }
+  footer > button:hover{
+    box-shadow: 0 0 5px 1px black;
+  }
+  
+  footer > label{
+    display: inline-block;
+    width: 40%;
+  }
+  @media screen and (min-width: 720px) {
+
+    main{
+        display: flex;
+        flex-direction: column-reverse;
+      }
+      .gridContainer{
+       grid-template-columns: repeat(2,1fr);
+      }
   }
 
-  nav > a {
-    height: 100%;
-    width: auto;
-  }
-  .gridContainer {
-    grid-template-columns: repeat(3, 1fr);
+  @media  screen and (min-width: 992px) {
+    main{
+      display: flex;
+      flex-direction: row-reverse;
+    }
+    nav{
+      flex-direction: column;
+    }
+    
+    nav > a{
+      height: 100%;
+      width: auto;
+    }
+    .gridContainer{
+        grid-template-columns: repeat(3,1fr);
+        width: 100%;
+        height: 100%;
+      }
     
   }
-}

@@ -22,6 +22,8 @@ function showAllTabs(event) {
     updateCurrent(event.currentTarget);
     document.getElementsByTagName("body")[0].classList.remove("single-column");
 
+    console.log(document.getElementsByTagName("body")[0])
+
     /*let hiddenArticles = document.getElementsByClassName("hidden");
     for(let i=hiddenArticles.length-1; i>=0; i--){
         hiddenArticles[i].classList.remove("hidden");

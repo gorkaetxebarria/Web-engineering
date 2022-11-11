@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --grey: #636363;
+    --mondragonTurquoise: #008996;
+    --selected: steelblue;
+}
+
+body{
+    background-color: var(--mondragonTurquoise);
+}
+
+nav{
+    background-color: var(--grey);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    grid-area: nav;
+}
+
+nav > a{
+    background-color: var(--mondragonTurquoise);
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+}
+
+nav > *{
+    margin-bottom: 20px;
+}
+
+main{
+    background-color: var(--mondragonTurquoise);
+    margin-top: 10px;
+}
+
+.card > p:first-child{
+    font-weight: bold;
+    background-color: var(--grey);
+    padding: 10px;
+    position: absolute;
+    width: calc(100% - 20px);
+    border-radius: 0 20px 0 0;
+}
+
+.card > button{
+    padding: 10px;
+    border-radius: 0 20px 0 0;
+    position: absolute;
+    right: 0;
+}
+
+.card > img{
+    width: 100%;
+    border-radius: 0 20px 20px 20px;
+    display: block;
+}
+
+.card{
+    position: relative;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.information{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: black;
+    text-align: center;
+    background-color: white;
+    opacity: 0.6;
+    border-radius: 0 0 20px 20px;
+}
+
+footer{
+    grid-area: footer;
+}
+
+footer > *{
+    width: 100%;
+    display: block;
+    padding: 1.5rem;
+}
+
+footer > button{
+    color: white;
+    background-color: var(--grey);
+    border: none;
+}
+
+footer > button:hover{
+    background-color: white;
+    color: var(--grey);
+}
+
+footer > img{
+    width: calc(100% - 3rem);
+}
+
+@media (min-width: 600px){
+    nav{
+        flex-direction: row;
+    }
+
+    nav > a{
+        width: 100%;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    nav > img{
+        margin: 0;
+        width: auto;
+        height: 4rem;
+    }
+
+    body{
+        display: grid;
+        grid-template-areas: 
+        "nav"
+        "main"
+        "footer";
+    }
+
+    main{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-area: main;
+    }
+
+    .card{
+        margin: 10px;
+        width: calc(100% - 20px);
+        height: fit-content;
+    }
+
+    .card > p:first-child{
+        border-radius: 20px 20px 0 0;
+    }
+
+    .card > img{
+        border-radius: 20px;
+    }
+
+    footer > button{
+        display: inline-block;
+        width: calc(40% - 1.5rem);
+        vertical-align: bottom;
+    }
+
+    footer > img{
+        display: inline-block;
+        width: calc(20% - 1.5rem);
+        vertical-align: bottom;
+    }
+}
+
+@media(min-width: 1024px){
+    nav{
+        display: grid;
+        grid-template-rows: repeat(7, 1fr);
+    }
+
+    nav > a{
+        width: auto;
+        margin: 2px;
+        border-radius: 10px;
+    }
+
+    body{
+        grid-template-areas: 
+        "nav main"
+        "footer footer";
+        grid-template-rows: 90% 10%;
+        
+    }
+
+    main{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-area: main;
+    }
+
+    footer > img{
+        height: 10%;
+    }
+}
+
+@media(min-width: 1280px){
+    main{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

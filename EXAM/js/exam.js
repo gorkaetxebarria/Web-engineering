@@ -3,7 +3,7 @@ var unselectTimeout;
 var hideTimeout;
 
 window.onload = function(){
-  document.querySelectorAll("subject").forEach(function(element){
+  document.querySelectorAll("article").forEach(function(element){
     element.addEventListener("click", subjectClick);
   })
   document.getElementById("hide").addEventListener("click", hide);
